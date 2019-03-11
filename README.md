@@ -24,25 +24,25 @@ These files are Episerver CMS editors for EPiServer.Shell.ObjectEditing.SelectOn
     
 3. Decorate the property/ies.
     ```c#
-    [SelectOne(SelectionFactoryType = typeof(ColorSelectionFactory))]
-    public virtual string ColorDropDown { get; set; }
+    [SelectOne(SelectionFactoryType = typeof(YOUR_SelectionFactory))]
+    public virtual string DropDown { get; set; }
 
-    [SelectMany(SelectionFactoryType = typeof(ColorSelectionFactory))]
-    public virtual string ColorsCheckBoxes { get; set; }
+    [SelectMany(SelectionFactoryType = typeof(YOUR_SelectionFactory))]
+    public virtual string CheckBoxes { get; set; }
     ```
     
-4. Update you selection factory to use new non-encoding editors.
+4. Update your selection factory to use non-encoding editors.
     
     ```c#
     public IEnumerable<ISelectItem> GetSelections(ExtendedMetadata metadata)
     {
       if (metadata.Attributes.Any(a => a.GetType() == typeof(SelectOneAttribute)))
       {
-        metadata.ClientEditingClass = "alloy/editors/NonEncodingSelectionEditor";
+        metadata.ClientEditingClass = "YOUR_SITE_PREFIX/editors/NonEncodingSelectionEditor";
       }
       else if (metadata.Attributes.Any(a => a.GetType() == typeof(SelectManyAttribute)))
       {
-        metadata.ClientEditingClass = "alloy/editors/NonEncodingCheckBoxListEditor";
+        metadata.ClientEditingClass = "YOUR_SITE_PREFIX/editors/NonEncodingCheckBoxListEditor";
       }
       
       return new[]
