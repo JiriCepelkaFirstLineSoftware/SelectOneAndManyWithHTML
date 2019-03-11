@@ -1,4 +1,4 @@
-# ColorSelectionFactory
+# SelectOneAndManyWithHTML
 These files enable one to use HTML along the EPiServer.Shell.ObjectEditing.ISelectionFactory implemenation. How to use modified editors you can check in ColorSelectionFactory.cs.
 
 ### How to
