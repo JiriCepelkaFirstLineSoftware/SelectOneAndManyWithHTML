@@ -1,9 +1,9 @@
 # SelectOneAndManyWithHTML
-These files enable one to use HTML along the EPiServer.Shell.ObjectEditing.ISelectionFactory implemenation. How to use modified editors you can check in ColorSelectionFactory.cs.
+These files are Episerver CMS editors for EPiServer.Shell.ObjectEditing.SelectOneAttribute and EPiServer.Shell.ObjectEditing.SelectManyAttribute that do not encode HTML so they enable one to use HTML along the EPiServer.Shell.ObjectEditing.ISelectionFactory implementation. How to use modified editors you can check in ColorSelectionFactory.cs.
 
 ### How to
 
-1. Place the editor files in your solution. Best fits in ~/ClientResources/Scripts/Editors. Otherwise you have to change paths.
+1. Place the files in your solution in ~/ClientResources/Scripts/Editors.
 2. Edit the NonEncodingSelectionEditor.js and NonEncodingCheckBoxListEditor.js and change prefix path in declaration to your site prefix. That you can found in root folder module.config.
 
     ##### Script
@@ -22,7 +22,7 @@ These files enable one to use HTML along the EPiServer.Shell.ObjectEditing.ISele
         …
     ```
     
-3. Decorate and setup the property/ies.
+3. Decorate the property/ies.
     ```c#
     [SelectOne(SelectionFactoryType = typeof(ColorSelectionFactory))]
     public virtual string ColorDropDown { get; set; }
@@ -34,18 +34,17 @@ These files enable one to use HTML along the EPiServer.Shell.ObjectEditing.ISele
 4. Update you selection factory to use new non-encoding editors.
     
     ```c#
-		public IEnumerable<ISelectItem> GetSelections(ExtendedMetadata metadata)
-		{
-			if (metadata.Attributes.Any(a => a.GetType() == typeof(SelectOneAttribute)))
-			{
-				metadata.ClientEditingClass = "alloy/editors/NonEncodingSelectionEditor";
-			}
-			else if (metadata.Attributes.Any(a => a.GetType() == typeof(SelectManyAttribute)))
-			{
-				metadata.ClientEditingClass = "alloy/editors/NonEncodingCheckBoxListEditor";
-			}
-			
-		 …
+    public IEnumerable<ISelectItem> GetSelections(ExtendedMetadata metadata)
+    {
+      if (metadata.Attributes.Any(a => a.GetType() == typeof(SelectOneAttribute)))
+      {
+        metadata.ClientEditingClass = "alloy/editors/NonEncodingSelectionEditor";
+      }
+      else if (metadata.Attributes.Any(a => a.GetType() == typeof(SelectManyAttribute)))
+      {
+        metadata.ClientEditingClass = "alloy/editors/NonEncodingCheckBoxListEditor";
+      }
+      …
      ```
 ### License
 MIT
