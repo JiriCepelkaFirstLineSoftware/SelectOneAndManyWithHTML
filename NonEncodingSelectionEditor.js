@@ -1,10 +1,9 @@
-﻿define("alloy/editors/NonEncodingSelectionEditor", [
+﻿define("alloy/Editors/NonEncodingSelectionEditor", [
 
 		// Dojo
     "dojo/_base/array",
     "dojo/_base/declare",
-    "dojo/_base/lang",
-    "dojo/dom-class",
+    "dojo/_base/lang",    
     "dojo/on",
 
     // Dijit
@@ -21,8 +20,7 @@ function (
 		// Dojo
     array,
     declare,
-    lang,
-    domClass,
+    lang,    
     on,
     
     // Dijit

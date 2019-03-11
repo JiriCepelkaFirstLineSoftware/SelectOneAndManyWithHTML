@@ -1,12 +1,11 @@
-﻿define("alloy/editors/NonEncodingCheckBoxListEditor", [
+﻿define("alloy/Editors/NonEncodingCheckBoxListEditor", [
 
 // Dojo
     "dojo/_base/array",
     "dojo/_base/declare",
     "dojo/_base/lang",
     "dojo/dom-construct",
-    "dojo/on",
-    "dojox/html/entities",
+    "dojo/on",    
 
     // Dijit
     "dijit/focus",
@@ -23,8 +22,7 @@
     declare,
     lang,
     domConstruct,
-    on,
-    entities,
+    on,    
 
     // Dijit
     focusUtil,
