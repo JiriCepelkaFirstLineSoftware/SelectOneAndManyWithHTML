@@ -31,18 +31,18 @@ These files are Episerver CMS editors for EPiServer.Shell.ObjectEditing.SelectOn
     public virtual string CheckBoxes { get; set; }
     ```
     
-4. Update you selection factory to use new non-encoding editors.
+4. Update your selection factory to use non-encoding editors.
     
     ```c#
     public IEnumerable<ISelectItem> GetSelections(ExtendedMetadata metadata)
     {
       if (metadata.Attributes.Any(a => a.GetType() == typeof(SelectOneAttribute)))
       {
-        metadata.ClientEditingClass = "alloy/editors/NonEncodingSelectionEditor";
+        metadata.ClientEditingClass = "YOUR_SITE_PREFIX/editors/NonEncodingSelectionEditor";
       }
       else if (metadata.Attributes.Any(a => a.GetType() == typeof(SelectManyAttribute)))
       {
-        metadata.ClientEditingClass = "alloy/editors/NonEncodingCheckBoxListEditor";
+        metadata.ClientEditingClass = "YOUR_SITE_PREFIX/editors/NonEncodingCheckBoxListEditor";
       }
       
       return new[]
