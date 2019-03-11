@@ -9,8 +9,8 @@ These files are Episerver CMS editors for EPiServer.Shell.ObjectEditing.SelectOn
     ##### Script
 
     ``` javascript
-    define("YOUR_SITE_PREFIX/editors/NonEncodingSelectionEditor",
-    define("YOUR_SITE_PREFIX/editors/NonEncodingCheckBoxListEditor",    
+    define("YOUR_SITE_PREFIX/Editors/NonEncodingSelectionEditor",
+    define("YOUR_SITE_PREFIX/Editors/NonEncodingCheckBoxListEditor",    
      ```
     ##### Config
 
@@ -38,11 +38,11 @@ These files are Episerver CMS editors for EPiServer.Shell.ObjectEditing.SelectOn
     {
       if (metadata.Attributes.Any(a => a.GetType() == typeof(SelectOneAttribute)))
       {
-        metadata.ClientEditingClass = "YOUR_SITE_PREFIX/editors/NonEncodingSelectionEditor";
+        metadata.ClientEditingClass = "YOUR_SITE_PREFIX/Editors/NonEncodingSelectionEditor";
       }
       else if (metadata.Attributes.Any(a => a.GetType() == typeof(SelectManyAttribute)))
       {
-        metadata.ClientEditingClass = "YOUR_SITE_PREFIX/editors/NonEncodingCheckBoxListEditor";
+        metadata.ClientEditingClass = "YOUR_SITE_PREFIX/Editors/NonEncodingCheckBoxListEditor";
       }
       
       return new[]
