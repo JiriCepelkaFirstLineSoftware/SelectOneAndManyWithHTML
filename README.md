@@ -24,10 +24,10 @@ These files are Episerver CMS editors for EPiServer.Shell.ObjectEditing.SelectOn
     
 3. Decorate the property/ies.
     ```c#
-    [SelectOne(SelectionFactoryType = typeof(ColorSelectionFactory))]
+    [SelectOne(SelectionFactoryType = typeof(YOUR_SelectionFactory))]
     public virtual string ColorDropDown { get; set; }
 
-    [SelectMany(SelectionFactoryType = typeof(ColorSelectionFactory))]
+    [SelectMany(SelectionFactoryType = typeof(YOUR_SelectionFactory))]
     public virtual string ColorsCheckBoxes { get; set; }
     ```
     
