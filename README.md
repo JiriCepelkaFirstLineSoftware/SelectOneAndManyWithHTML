@@ -1,5 +1,5 @@
 # SelectOneAndManyWithHTML
-These files are Episerver CMS editors for EPiServer.Shell.ObjectEditing.SelectOneAttribute and EPiServer.Shell.ObjectEditing.SelectManyAttribute that do not encode HTML so they enable one to use HTML along the EPiServer.Shell.ObjectEditing.ISelectionFactory implementation. How to use modified editors you can check in ColorSelectionFactory.cs.
+These files are Episerver CMS editors for EPiServer.Shell.ObjectEditing.SelectOneAttribute and EPiServer.Shell.ObjectEditing.SelectManyAttribute that do not encode HTML so they enable one to use HTML along the EPiServer.Shell.ObjectEditing.ISelectionFactory implementation.
 
 ### How to
 
@@ -44,6 +44,10 @@ These files are Episerver CMS editors for EPiServer.Shell.ObjectEditing.SelectOn
       {
         metadata.ClientEditingClass = "alloy/editors/NonEncodingCheckBoxListEditor";
       }
+      
+      return new[]
+      {
+        new SelectItem{Value = null, Text = "<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Debrecziner.jpg/220px-Debrecziner.jpg\">"},
       …
      ```
 ### License
