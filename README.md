@@ -47,7 +47,7 @@ These files are Episerver CMS editors for EPiServer.Shell.ObjectEditing.SelectOn
       
       return new[]
       {
-        new SelectItem{Value = null, Text = "<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Debrecziner.jpg/220px-Debrecziner.jpg\">"},
+        new SelectItem{Value = null, Text = "<img src=\"https://tinyurl.com/y3qapon2\">"},
       …
      ```
 ### License
