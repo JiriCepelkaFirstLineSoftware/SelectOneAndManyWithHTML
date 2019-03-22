@@ -1,4 +1,5 @@
-﻿define("alloy/Editors/NonEncodingSelectionEditor", [
+﻿// SelectionEditor.js.uncompressed.js of Dojo Toolkit v 1.8.9 modification.
+define("alloy/Editors/NonEncodingSelectionEditor", [
 
 		// Dojo
     "dojo/_base/array",
