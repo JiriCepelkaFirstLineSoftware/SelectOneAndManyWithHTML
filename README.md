@@ -51,4 +51,4 @@ These files are Episerver CMS editors for EPiServer.Shell.ObjectEditing.SelectOn
       …
      ```
 ### License
-MIT
+Available via Academic Free License >= 2.1 OR the modified BSD license.
