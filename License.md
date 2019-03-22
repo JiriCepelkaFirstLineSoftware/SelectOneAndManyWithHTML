@@ -4,7 +4,7 @@ This Academic Free License (the "License") applies to any original work of autho
 
 Licensed under the Academic Free License version 2.1
 
-1) Grant of Copyright License. Licensor hereby grants You a world-wide, royalty-free, non-exclusive, perpetual, sublicenseable license to do the following:
+1. Grant of Copyright License. Licensor hereby grants You a world-wide, royalty-free, non-exclusive, perpetual, sublicenseable license to do the following:
 
 ..a) to reproduce the Original Work in copies;
 
